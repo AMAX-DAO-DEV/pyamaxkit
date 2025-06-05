@@ -25,6 +25,10 @@ def main():
         raise RuntimeError(
             "Go compiler not found. Install it and ensure 'go' is in your PATH."
         )
+    if which("gcc") is None:
+        raise RuntimeError(
+            "C compiler not found. Install GCC or another compiler compatible with CGO."
+        )
 
     # Ensure required tools are available
     # Use the current Python interpreter to ensure the ``python`` command
