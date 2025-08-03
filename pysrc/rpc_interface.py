@@ -221,7 +221,7 @@ class RPCInterface(HttpClient):
 
     def get_table_rows(self, json, code, scope, table, lower_bound,
                        upper_bound, limit, key_type='', index_position='', encode_type='',
-                       reverse = False, show_payer = False) -> Dict:
+                       reverse=False, show_payer=False) -> Dict:
         """ Fetch smart contract data from an account. 
         key_type: "i64"|"i128"|"i256"|"float64"|"float128"|"sha256"|"ripemd160"
         index_position: "2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|"10"
@@ -239,8 +239,8 @@ class RPCInterface(HttpClient):
             key_type=key_type,
             index_position=index_position,
             encode_type=encode_type,
-            reverse = False,
-            show_payer = False
+            reverse=reverse,
+            show_payer=show_payer
         )
 
         return self.rpc_request(
@@ -249,7 +249,7 @@ class RPCInterface(HttpClient):
             body=body
         )
 
-    def get_table_by_scope(self, code, table, lower_bound, upper_bound) -> Dict:
+    def get_table_by_scope(self, code, table, lower_bound, upper_bound, limit=10) -> Dict:
         """ Fetch smart contract data from an account. """
 
         body = dict(
@@ -257,7 +257,7 @@ class RPCInterface(HttpClient):
             table=table,
             lower_bound=lower_bound,
             upper_bound=upper_bound,
-            limit=10
+            limit=limit
         )
 
         return self.rpc_request(
