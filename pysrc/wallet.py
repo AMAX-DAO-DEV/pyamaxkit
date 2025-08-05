@@ -10,15 +10,15 @@ from . import config
 def _to_amax_prefix(pub_key: str) -> str:
     """Convert a public key from the configured prefix to EOS for internal use."""
     prefix = config.public_key_prefix
-    if prefix != 'AM' and pub_key.startswith(prefix):
-        return prefix + pub_key[len(prefix):]
+    if prefix == 'AM' and pub_key.startswith('EOS'):
+        return prefix + pub_key[3:]
     return pub_key
 
 def _from_amax_prefix(pub_key: str) -> str:
     """Convert a public key from EOS prefix to the configured prefix."""
     prefix = config.public_key_prefix
-    if prefix != 'AM' and pub_key.startswith('AM'):
-        return prefix + pub_key[2:]
+    if prefix == 'AM' and pub_key.startswith('EOS'):
+        return prefix + pub_key[3:]
     return pub_key
 
 def check_result(result, json=False):
