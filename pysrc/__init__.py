@@ -32,7 +32,7 @@ except ImportError as e:
 
 _pyeoskit = _native
 
-__version__ = '1.0.6'
+__version__ = '1.0.7'
 
 if _HAS_NATIVE:
     _pyeoskit.init()

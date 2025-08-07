@@ -18,7 +18,7 @@ if platform.system() == 'Windows':
 
 setup(
     name="pyamaxkit",
-    version="1.0.6",
+    version="1.0.7",
     description="Python Toolkit for AMAX",
     author='learnforpractice',
     license="MIT",
