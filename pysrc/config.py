@@ -85,4 +85,4 @@ def setup_eos_test_network(url = 'https://chain.amaxtest.com', deploy_type=1):
         os.remove('test.wallet')
     wallet.create('test')
     # import active key for hello
-    wallet.import_key('test', '5JRYimgLBrRLCBAcjHUWCYRv3asNedTYYzVgmiU4q2ZVxMBiJXL')
+    wallet.import_key('5JRYimgLBrRLCBAcjHUWCYRv3asNedTYYzVgmiU4q2ZVxMBiJXL')

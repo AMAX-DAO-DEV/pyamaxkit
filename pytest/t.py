@@ -88,12 +88,12 @@ def commit(commit_id=None):
         if not psw:
             raise Exception('create wallet failed!')
 #        print('+++psw:', psw)
-        wallet.import_key('.commit', '5JkRtzuX6JBbfnxkf9iRrqYonhQEaqqCMgRThJpxMsSnAxqBzkJ')
+        wallet.import_key('5JkRtzuX6JBbfnxkf9iRrqYonhQEaqqCMgRThJpxMsSnAxqBzkJ')
         js['psw'] = psw
     else:
 #        print(psw)
         wallet.unlock('.commit', psw)
-    wallet.import_key('.commit', '5JkRtzuX6JBbfnxkf9iRrqYonhQEaqqCMgRThJpxMsSnAxqBzkJ')
+    wallet.import_key('5JkRtzuX6JBbfnxkf9iRrqYonhQEaqqCMgRThJpxMsSnAxqBzkJ')
 
     try:
         id = 'aabbccdd'

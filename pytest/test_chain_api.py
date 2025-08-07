@@ -1,6 +1,6 @@
 
 from pyamaxkit import amaxapi, wallet, config
-wallet.import_key('amaxpykitwlt', '5JGgqHGvDtW4a1ERkS5stRJNWfyKHw5mi2hkGyTMjMKX36ow9Ym')
+wallet.import_key('5JGgqHGvDtW4a1ERkS5stRJNWfyKHw5mi2hkGyTMjMKX36ow9Ym')
 
 print(wallet.get_public_keys())
 

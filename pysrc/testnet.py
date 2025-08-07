@@ -77,7 +77,7 @@ class Testnet(object):
         ]
 
         for priv_key in priv_keys:
-            wallet.import_key('test', priv_key, False)
+            wallet.import_key(priv_key, False)
 
     def start_nodes(self, wait=False):
         self.nodes = []

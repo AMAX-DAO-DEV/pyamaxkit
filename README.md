@@ -40,7 +40,7 @@ python3 -m pip install pyamaxkit
 import os
 from pyamaxkit import amaxapi, wallet
 #import your account private key here
-wallet.import_key('mywallet', '5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
+wallet.import_key('5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
 
 amaxapi.set_node('https://chain.amaxtest.com')
 info = amaxapi.get_info()
@@ -62,7 +62,7 @@ from pyamaxkit import wallet
 from pyamaxkit.chainapi import ChainApiAsync
 
 #import your account private key here
-wallet.import_key('mywallet', '5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
+wallet.import_key('5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
 
 async def test():
     amaxapi = ChainApiAsync('https://chain.amaxtest.com')

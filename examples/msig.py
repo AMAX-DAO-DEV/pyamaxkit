@@ -9,7 +9,7 @@ pub_key = 'EOS6wJhZLfAjG9F9nXJL3x5EJRpEBximZqmoST7hskqQ3AYBVv9bm'
 proposer = 'proposer'
 
 #import your account private key here
-# wallet.import_key('mywallet', '')
+# wallet.import_key('')
 
 amaxapi.set_node('https://api.eosn.io')
 

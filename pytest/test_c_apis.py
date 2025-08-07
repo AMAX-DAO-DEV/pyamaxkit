@@ -191,7 +191,7 @@ class Test(object):
         h = hashlib.sha256(b'123').hexdigest()
 
         priv = '5JRYimgLBrRLCBAcjHUWCYRv3asNedTYYzVgmiU4q2ZVxMBiJXL'
-        wallet.import_key('test', priv)
+        wallet.import_key(priv)
         pub = amaxapi.get_public_key(priv)
         sign = wallet.sign_digest(h, pub)
 

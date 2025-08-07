@@ -63,12 +63,12 @@ def lock(name):
 def unlock(name, password):
     pass
 
-def import_key(name, wif_key, save=True):
-    ret = _pyeoskit.wallet_import(name, wif_key)
+def import_key(wif_key, save=True):
+    ret = _pyeoskit.wallet_import(wif_key)
     return check_result(ret)
 
-def remove_key(name, pub_key):
-    ret = _pyeoskit.wallet_remove(name, _to_amax_prefix(pub_key))
+def remove_key(pub_key):
+    ret = _pyeoskit.wallet_remove(_to_amax_prefix(pub_key))
     return ret
 
 def sign_transaction(chain_index, trx: Union[str, dict], public_keys: List[str], chain_id: str, json=False):

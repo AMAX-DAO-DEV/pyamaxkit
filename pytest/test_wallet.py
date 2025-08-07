@@ -16,7 +16,7 @@ amaxapi.set_node('http://127.0.0.1:8899')
 if os.path.exists('mywallet.wallet'):
     os.remove('mywallet.wallet')
 psw = wallet.create('mywallet')
-wallet.import_key('mywallet', '5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
+wallet.import_key('5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
 
 class Test(object):
 
@@ -62,10 +62,10 @@ class Test(object):
         logger.info(key)
 
         priv_key = key['private']
-        r = wallet.import_key(mywallet, priv_key)
+        r = wallet.import_key(priv_key)
         assert r
 
-        r = wallet.import_key(mywallet, priv_key)
+        r = wallet.import_key(priv_key)
         assert not r
         logger.error(amaxapi.get_last_error())
 
@@ -73,7 +73,7 @@ class Test(object):
         wallet.set_timeout(1)
         time.sleep(2)
         priv_key = amaxapi.create_key()['private']
-        r = wallet.import_key(mywallet, priv_key)
+        r = wallet.import_key(priv_key)
         assert not r
         logger.error(amaxapi.get_last_error())
 
@@ -81,7 +81,7 @@ class Test(object):
         assert r
 
         priv_key = amaxapi.create_key()['private']
-        r = wallet.import_key(mywallet, priv_key)
+        r = wallet.import_key(priv_key)
         assert r
 
         with pytest.raises(WalletException):
@@ -119,7 +119,7 @@ class Test(object):
         wallet.unlock('mywallet', psw)
         priv_key = '5J4LuMP6A7R4QiEHFJX1FJQDy9RqUjMpkpdoTLTuPFgTyxBNsUp'
         pub_key = amaxapi.get_public_key(priv_key)
-        wallet.import_key('mywallet', priv_key)
+        wallet.import_key(priv_key)
         keys = wallet.list_keys('mywallet', psw)
         logger.info(keys)
         assert pub_key in keys
