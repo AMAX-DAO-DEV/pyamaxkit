@@ -18,8 +18,8 @@ if platform.system() == 'Windows':
 
 setup(
     name="pyamaxkit",
-    version="1.0.4",
-    description="Python Toolkit for EOS",
+    version="1.0.7",
+    description="Python Toolkit for AMAX",
     author='learnforpractice',
     license="MIT",
     url="https://github.com/AMAX-DAO-DEV/pyamaxkit",
