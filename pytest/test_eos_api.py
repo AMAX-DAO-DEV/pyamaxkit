@@ -64,7 +64,7 @@ class Test(object):
         if os.path.exists('test.wallet'):
             os.remove('test.wallet')
         psw = wallet.create('test')
-        wallet.import_key('test', '5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
+        wallet.import_key('5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
 
         #amaxapi.set_nodes(['https://nodes.uuos.network:8443'])
         amaxapi.set_node('http://127.0.0.1:8888')
@@ -85,7 +85,7 @@ def apply(receiver, code, action):
             if os.path.exists('test.wallet'):
                 os.remove('test.wallet')
             psw = wallet.create('test')
-            wallet.import_key('test', '5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
+            wallet.import_key('5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
 
             #amaxapi.set_nodes(['https://nodes.uuos.network:8443'])
             api = ChainApiAsync('http://127.0.0.1:8888', 'UUOS')

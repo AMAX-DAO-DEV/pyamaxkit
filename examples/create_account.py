@@ -3,7 +3,7 @@
 from pyamaxkit import amaxapi, wallet
 
 #import your account private key here
-wallet.import_key('mywallet', '5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
+wallet.import_key('5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
 
 #account to update authorization
 account = 'testaccount'

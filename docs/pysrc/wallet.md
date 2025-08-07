@@ -49,7 +49,7 @@ def get_public_keys():
 [[find in source code]](https://github.com/AMAX-DAO-DEV/pyamaxkit/blob/master/pysrc/wallet.py#L50)
 
 ```python
-def import_key(name, wif_key, save=True):
+def import_key(wif_key, save=True):
 ```
 
 ## list_keys

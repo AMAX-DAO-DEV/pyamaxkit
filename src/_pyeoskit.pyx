@@ -30,8 +30,8 @@ cdef extern from "wrapper.h" nogil:
     bool get_debug_flag_()
 
     void say_hello_(char* name)
-    char* wallet_import_(char* name, char* priv)
-    bool wallet_remove_(char *name, char *pubKey)
+    char* wallet_import_(char* priv)
+    bool wallet_remove_(char *pubKey)
 
     char* wallet_get_public_keys_()
 
@@ -92,13 +92,13 @@ def init():
 def say_hello(char* name):
     say_hello_(name)
 
-def wallet_import(char* name, char* priv):
+def wallet_import(char* priv):
     cdef char *ret
-    ret = wallet_import_(name, priv)
+    ret = wallet_import_(priv)
     return convert(ret)
 
-def wallet_remove(char *name, char *pubKey):
-    return wallet_remove_(name, pubKey)
+def wallet_remove(char *pubKey):
+    return wallet_remove_(pubKey)
 
 def transaction_new(int64_t chain_index, int64_t expiration, char* refBlock, char* chainId):
     return transaction_new_(chain_index, expiration, refBlock, chainId)

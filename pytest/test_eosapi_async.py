@@ -28,8 +28,8 @@ class TestChainApiAsync(object):
         cls.testnet = Testnet(single_node=True, show_log=True)
         cls.testnet.run()
 
-        # wallet.import_key('mywallet', '5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
-        # wallet.import_key('mywallet', '5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
+        # wallet.import_key('5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
+        # wallet.import_key('5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
 
     @classmethod
     def teardown_class(cls):

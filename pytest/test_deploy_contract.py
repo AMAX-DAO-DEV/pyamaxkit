@@ -5,7 +5,7 @@ if os.path.exists('mywallet.wallet'):
     os.remove('mywallet.wallet')
 psw = wallet.create('mywallet')
 wallet.unlock('mywallet', psw)
-wallet.import_key('mywallet', '5JbDP55GXN7MLcNYKCnJtfKi9aD2HvHAdY7g8m67zFTAFkY1uBB')
+wallet.import_key('5JbDP55GXN7MLcNYKCnJtfKi9aD2HvHAdY7g8m67zFTAFkY1uBB')
 
 code = b'''
 import db

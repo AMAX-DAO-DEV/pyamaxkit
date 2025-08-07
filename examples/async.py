@@ -4,7 +4,7 @@ from pyamaxkit import wallet
 from pyamaxkit.chainapi import ChainApiAsync
 
 #import your account private key here
-#wallet.import_key('mywallet', '')
+#wallet.import_key('')
 
 async def test():
     amaxapi = ChainApiAsync('https://api.eosn.io')

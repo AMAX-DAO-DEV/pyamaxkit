@@ -111,7 +111,7 @@ python -m pip uninstall pyamaxkit -y;python -m pip install .\dist\pyamaxkit-[SUF
 import os
 from pyeoskit import amaxapi, wallet
 #import your account private key here
-wallet.import_key('mywallet', '5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
+wallet.import_key('5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
 
 amaxapi.set_node('https://eos.greymass.com')
 info = amaxapi.get_info()
@@ -133,7 +133,7 @@ from pyeoskit import wallet
 from pyeoskit.chainapi import ChainApiAsync
 
 #import your account private key here
-wallet.import_key('mywallet', '5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
+wallet.import_key('5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
 
 async def test():
     amaxapi = ChainApiAsync('https://eos.greymass.com')

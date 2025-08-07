@@ -39,7 +39,7 @@ class Test(object):
         if os.path.exists('test.wallet'):
             os.remove('test.wallet')
         wallet.create('test')
-        wallet.import_key('test', '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3')
+        wallet.import_key('5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3')
 
         config.main_token = 'EOS'
         config.main_token_contract = 'uuos.token'

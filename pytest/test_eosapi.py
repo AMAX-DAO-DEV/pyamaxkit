@@ -30,8 +30,8 @@ class TestApi(object):
         cls.info = amaxapi.get_info()
         # logger.info(cls.info)
         cls.chain_id = cls.info['chain_id']
-        # wallet.import_key('mywallet', '5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
-        # wallet.import_key('mywallet', '5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
+        # wallet.import_key('5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p')
+        # wallet.import_key('5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
 
     @classmethod
     def teardown_class(cls):
