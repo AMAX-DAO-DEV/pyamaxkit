@@ -33,6 +33,7 @@ cdef extern from "wrapper.h" nogil:
     char* wallet_import_(char* priv)
     bool wallet_remove_(char *pubKey)
 
+    char* wallet_get_public_key_(char* priv)
     char* wallet_get_public_keys_()
 
     int64_t transaction_new_(int64_t chain_index, int64_t expiration, char* refBlock, char* chainId);
@@ -155,6 +156,11 @@ def transaction_marshal(int64_t chain_index, int64_t idx):
 def transaction_unpack(char* data):
     cdef char *ret
     ret = transaction_unpack_(data)
+    return convert(ret)
+
+def wallet_get_public_key(char* priv):
+    cdef char *ret
+    ret = wallet_get_public_key_(priv)
     return convert(ret)
 
 # char* wallet_get_public_keys_()

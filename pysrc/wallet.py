@@ -54,6 +54,12 @@ def get_public_keys():
     keys = [_from_amax_prefix(k) for k in ret['data']]
     return keys
 
+def get_public_key(wif_key):
+    ret = _pyeoskit.wallet_get_public_key(wif_key)
+    ret = json.loads(ret)
+    key = _from_amax_prefix(ret['data'])
+    return key
+
 def lock_all():
     pass
 
